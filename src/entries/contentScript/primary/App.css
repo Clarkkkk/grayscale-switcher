@@ -1,0 +1,15 @@
+html,
+body,
+html * {
+  transition: filter 500ms linear;
+}
+
+html.colored,
+body.colored {
+  filter: grayscale(0) !important;
+}
+
+html.grayed,
+body.grayed {
+  filter: grayscale(1) !important;
+}
