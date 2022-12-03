@@ -4,7 +4,15 @@ A web extension to change website's grayscale
 
 ## Usage Notes
 
-Click the switch button to change the website's grayscale to 0 or 1.
+### Install
+
+1. Go to [Release](https://github.com/Clarkkkk/grayscale-switcher/releases) page and download the zip file of latest version.
+2. Unzip the file to a folder.
+3. Open your browser and go to the extension page. For example, open [chrome://extensions/](chrome://extensions/) in Chrome, turn on "Develop mode", click "Load unpacked", and select the folder you just unzipped.
+
+### Usage
+
+Click the switch button to change the website's grayscale from 0 to 1 or from 1 to 0.
 
 ## Develop Notes
 
