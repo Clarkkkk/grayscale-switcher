@@ -24,19 +24,16 @@ function App() {
       if (!doc) return
 
       const html = doc.querySelector('html')
-      const body = doc.querySelector('body')
 
-      if (!html || !body) return
+      if (!html) return
 
       if (option.state === 'colored') {
         html.classList.add('colored')
-        body.classList.add('colored')
       } else {
         html.classList.add('grayed')
-        body.classList.add('grayed')
       }
 
-      document.querySelectorAll<HTMLElement>('body *').forEach((element) => {
+      document.querySelectorAll<HTMLElement>('body,html,body *').forEach((element) => {
         const style = getComputedStyle(element)
         if (style.filter.includes('grayscale') && option.state === 'colored') {
           element.style.filter = 'grayscale(0)'
@@ -49,13 +46,10 @@ function App() {
         if (!doc) return
 
         const html = doc.querySelector('html')
-        const body = doc.querySelector('body')
 
-        if (!html || !body) return
+        if (!html) return
         html.classList.remove('colored')
-        body.classList.remove('colored')
         html.classList.remove('grayed')
-        body.classList.remove('grayed')
       })
     }
   }, [option])
